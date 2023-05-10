@@ -8,6 +8,8 @@ services:
       - "8010:80"
     environment:
       - API_HOST=127.0.0.1
+    volumes:
+      - ./html:/usr/share/nginx/html
     networks:
       - game
     depends_on:

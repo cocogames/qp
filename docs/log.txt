@@ -135,3 +135,6 @@ redis2      docker-entrypoint.sh redis ...   Up      6379/tcp
 server0     /run.sh                          Up      0.0.0.0:8011->81/tcp
 web0        /docker-entrypoint.sh ngin ...   Up      0.0.0.0:8010->80/tcp
 zookeeper   /bin/sh -c /usr/sbin/sshd  ...   Up      2181/tcp, 22/tcp, 2888/tcp, 3888/tcp
+
+grep -rw '127.0.0.1:81' /usr/share/nginx/html/
+/usr/share/nginx/html/h5/hall/resource/assets/HALL/HALL_config_53ef0ae.json:    "127.0.0.1:81"
