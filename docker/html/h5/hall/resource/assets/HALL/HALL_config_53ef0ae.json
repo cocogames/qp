@@ -1,0 +1,102 @@
+{
+  "date": "202102261521",
+  "ssls": [
+    false
+  ],
+  "ipList": [
+    "127.0.0.1:81"
+  ],
+  "hotList": [
+    "http://127.0.0.1/app/"
+  ],
+  "installHtml": "https://chat.123.com/",
+  "gatePortForApp": 8081,
+  "gatePortForH5": 6789,
+  "gameList": {
+    "top": [
+      [
+        "CDD",
+        0
+      ],
+      [
+        "DDZ",
+        0
+      ],
+      [
+        "ERMJ",
+        0
+      ]
+    ],
+    "bottom": [
+      [
+        "XLCH",
+        0
+      ],
+      [
+        "XZDD",
+        0
+      ]
+    ]
+  },
+  "friendGameList": {
+    "top": [
+      [
+        "CDD",
+        0
+      ],
+      [
+        "DDZ",
+        0
+      ],
+      [
+        "ERMJ",
+        0
+      ]
+    ],
+    "bottom": [
+      [
+        "XLCH",
+        0
+      ],
+      [
+        "XZDD",
+        0
+      ]
+    ]
+  },
+  "showReplay": false,
+  "allowGuestLogin": true,
+  "concatUs": "https://chat.123.com/",
+  "merchants": {
+    "default": {
+      "bankList": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "TW": {
+      "bankList": [
+        "台灣銀行",
+        "第一商業銀行",
+        "華南商業銀行",
+        "上海商業儲蓄銀行",
+        "台北銀行",
+        "世華聯合商業銀行",
+        "兆豐國際商業銀行",
+        "美商花旗銀行",
+        "台灣中小企業銀行",
+        "匯豐銀行",
+        "郵政儲金匯業局",
+        "亞太商業銀行",
+        "華信商業銀行",
+        "玉山商業銀行",
+        "台新國際商業銀行",
+        "中國信託商業銀行"
+      ]
+    }
+  }
+}

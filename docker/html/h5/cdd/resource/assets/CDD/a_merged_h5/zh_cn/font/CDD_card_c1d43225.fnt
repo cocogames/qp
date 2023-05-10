@@ -1,0 +1,11 @@
+{"file":"CDD_card.png","frames":{
+"1":{"x":90,"y":2,"w":24,"h":50,"offX":8,"offY":1,"sourceW":41,"sourceH":52},
+"2":{"x":88,"y":58,"w":37,"h":51,"offX":2,"offY":0,"sourceW":41,"sourceH":52},
+"3":{"x":45,"y":114,"w":39,"h":52,"offX":1,"offY":0,"sourceW":41,"sourceH":52},
+"4":{"x":2,"y":2,"w":41,"h":50,"offX":0,"offY":1,"sourceW":41,"sourceH":52},
+"5":{"x":2,"y":168,"w":39,"h":51,"offX":1,"offY":1,"sourceW":41,"sourceH":52},
+"6":{"x":47,"y":2,"w":39,"h":52,"offX":1,"offY":0,"sourceW":41,"sourceH":52},
+"7":{"x":88,"y":113,"w":37,"h":50,"offX":2,"offY":1,"sourceW":41,"sourceH":52},
+"8":{"x":45,"y":58,"w":39,"h":52,"offX":1,"offY":0,"sourceW":41,"sourceH":52},
+"9":{"x":2,"y":56,"w":39,"h":52,"offX":1,"offY":0,"sourceW":41,"sourceH":52},
+"0":{"x":2,"y":112,"w":39,"h":52,"offX":1,"offY":0,"sourceW":41,"sourceH":52}}}

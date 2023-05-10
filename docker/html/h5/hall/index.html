@@ -1,0 +1,225 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Go棋牌游戏简化公测版</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <meta name="apple-mobile-web-app-title" content="Go棋牌游戏简化公测版">
+	<link rel="apple-touch-icon" href="../addToDesktop/assets/app_icon.png">
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .puke-wrapper{
+            position:relative;width:80px;height:120px
+        }
+        .puke-wrapper div{
+            position:absolute;top:0;left:0;width:100%;height:100%;display:flex;
+            background-color:#fff;border-radius:12px;
+            transform-origin:center bottom;-webkit-transform-origin:center bottom;
+            border:1px solid #000;box-shadow:3px -2px 15px #454344;
+            padding: 5px;
+        }
+        @keyframes puke-1{
+            from{transform:rotate(0deg)}to{transform:rotate(-20deg)}
+        }
+        @keyframes puke-2{
+            from{transform:rotate(0deg)}to{transform:rotate(-10deg)}
+        }
+        @keyframes puke-3{
+            from{transform:rotate(0deg)}to{transform:rotate(0deg)}
+        }
+        @keyframes puke-4{
+            from{transform:rotate(0deg)}to{transform:rotate(10deg)}
+        }
+        @keyframes puke-5{
+            from{transform:rotate(0deg)}to{transform:rotate(20deg)}
+        }
+        .puke-wrapper div:nth-child(1){
+            animation:puke-1 2s infinite;-webkit-animation:puke-1 2s infinite;animation-direction:alternate;-webkit-animation-direction:alternate
+        }
+        .puke-wrapper div:nth-child(2){
+            animation:puke-2 2s infinite;-webkit-animation:puke-2 2s infinite;animation-direction:alternate;-webkit-animation-direction:alternate
+        }
+        .puke-wrapper div:nth-child(3){
+            animation:puke-3 2s infinite;-webkit-animation:puke-3 2s infinite;animation-direction:alternate;-webkit-animation-direction:alternate
+        }
+        .puke-wrapper div:nth-child(4){
+            animation:puke-4 2s infinite;-webkit-animation:puke-4 2s infinite;animation-direction:alternate;-webkit-animation-direction:alternate
+        }
+        .puke-wrapper div:nth-child(5){
+            animation:puke-5 2s infinite;-webkit-animation:puke-5 2s infinite;animation-direction:alternate;-webkit-animation-direction:alternate
+        }
+        .puke-wrapper div span{
+            width:100%;height:30px;position:absolute;
+            top:18px;
+            left:9px;
+            background-repeat:no-repeat;background-size:15px 15px;
+            text-align: left;
+        }
+        .logo{
+            text-align:center;margin-top:20px;margin-left:-10px;position:absolute;text-align:center;width:100%
+        }
+        .hong,.fang{
+            color:red
+        }
+
+        .rotation90{
+            transform:rotate(90deg);
+            -ms-transform:rotate(90deg);
+            -moz-transform:rotate(90deg);
+            -webkit-transform:rotate(90deg);
+            -o-transform:rotate(90deg);
+
+            transform-origin:0 0;
+            -ms-transform-origin:0 0;
+            -moz-transform-origin:0 0;
+            -webkit-transform-origin:0 0;
+            -o-transform-origin:0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="loadingDiv" style="position:absolute;top: 30%;display:block;width: 100%;text-align: center;">
+        <center>
+		    <div class="puke-wrapper">
+                <div class='hei'>10<span><font size="4px">♠</font></span></div>
+                <div class='fang'>&nbsp;J<span><font size="4px">♦</font></div>
+                <div class='mei'>&nbsp;Q<span><font size="4px">♣</font></div>
+                <div class='hong'>&nbsp;K<span><font size="4px">♥</font></div>
+                <div class='hong'>&nbsp;A<span><font size="4px">♥</font><p class="logo">Go棋牌游戏简化公测版</p></div>
+            </div>
+        </center>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+		 
+        <div style="color: #ffffff"><font size="5px">♠</font>  <span id="loadInfo" style="font-size: 20px">正在加载游戏引擎...</span>  <font size="5px">♠</font></div>
+	</div>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="landscape"
+         data-scale-mode="fixedWidth"
+         data-frame-rate="60"
+         data-content-width="1334"
+         data-content-height="750"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+    <img id="qrcodeImg" src="" style="display: none;position: absolute;top:0px;left: 0px;width: 100%;height: 100%;z-index: 9999"/>
+    <div id="no_canvasTip" style="margin: -150px 0 0 -475px;position:absolute;width: 1080px;height: 300px;top: 50%;left: 50%;display:none">
+		<p style="color: #ffffff;font-size: 26px;text-align: center;">您的当前浏览器无法打开该游戏！</p>
+		<p style="color: #ffffff;font-size: 26px;text-align: center;">如果您使用的是IE浏览器，请升级至<span style="color: red">IE10</span>及以上版本。</p>
+		<p style="color: #ffffff;font-size: 26px;text-align: center;">如果您使用的是QQ浏览器、360浏览器、猎豹浏览器等浏览器，请切换至<span style="color: red">极速模式</span>。</p>
+		<br>
+		<p style="color: #ffffff;font-size: 26px;text-align: center;">如果以上方法仍无法解决，请下载<span style="color: red">谷歌浏览器</span>，然后重试！</p>
+	</div>
+<script>
+    var loc = window.location.href;
+	if(loc.indexOf('http') != -1){
+        var idx = loc.indexOf('://');
+        var lastIdx = loc.indexOf('/', idx+3);
+        if(lastIdx == -1){
+            lastIdx = loc.length;
+        }
+        var dm = loc.substring(idx+3, lastIdx);
+        if(dm.indexOf(':')!=-1){
+            dm = dm.substr(0, dm.indexOf(':'));
+        }
+        document.domain = dm;
+    }
+
+    var sourceVer = Math.random();
+    var mergedJsName = '';
+    
+    var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };  
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        var errorFun = function(){
+            document.getElementById('loadInfo').innerText = '网络异常，初始化失败，请刷新后再试！错误码：1001';
+        }
+        s.addEventListener('error', errorFun);
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+    xhr.addEventListener("load", function () {
+        var manifest ;
+		try{
+			manifest = JSON.parse(xhr.response);
+		}catch(e){
+		
+		}
+		if(manifest == null){
+			document.getElementById('loadInfo').innerText = '网络异常，初始化失败，请刷新后再试！错误码：1002';
+			return;
+		}
+
+        mergedJsName = '../hall/' + manifest.initial[0];
+        var list = manifest.initial.concat(manifest.game);
+
+        if(manifest.v){
+            sourceVer = manifest.v;
+        }
+
+        loadScript(list, function () {
+            try{  
+                document.createElement('canvas').getContext('2d');  
+            }catch(e){  
+                document.getElementById("no_canvasTip").style.display = "block";
+                return;
+            }
+
+            egret.runEgret({ renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor:function(context) {
+                var backingStore = context.backingStorePixelRatio ||
+                    context.webkitBackingStorePixelRatio ||
+                    context.mozBackingStorePixelRatio ||
+                    context.msBackingStorePixelRatio ||
+                    context.oBackingStorePixelRatio ||
+                    context.backingStorePixelRatio || 1;
+                return (window.devicePixelRatio || 1) / backingStore;
+            }});
+
+        });
+    });
+    xhr.send(null);
+
+</script>
+</body>
+
+</html>

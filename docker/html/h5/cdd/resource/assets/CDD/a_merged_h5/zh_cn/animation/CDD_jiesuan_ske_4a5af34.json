@@ -1,0 +1,149 @@
+{
+	"frameRate": 24,
+	"isGlobal": 0,
+	"armature": [{
+		"bone": [{
+			"name": "root",
+			"transform": {
+				
+			}
+		}],
+		"type": "Sheet",
+		"frameRate": 24,
+		"animation": [{
+			"playTimes": 0,
+			"bone": [],
+			"slot": [{
+				"colorFrame": [],
+				"displayFrame": [{
+					"duration": 1
+				},
+				{
+					"value": 1,
+					"duration": 1
+				},
+				{
+					"value": 2,
+					"duration": 1
+				},
+				{
+					"value": 3,
+					"duration": 1
+				},
+				{
+					"value": 4,
+					"duration": 1
+				},
+				{
+					"value": 5,
+					"duration": 1
+				},
+				{
+					"value": 6,
+					"duration": 1
+				},
+				{
+					"value": 7,
+					"duration": 1
+				}],
+				"name": "sheetSlot"
+			}],
+			"ffd": [],
+			"ik": [],
+			"frame": [],
+			"name": "Sprite",
+			"duration": 8
+		}],
+		"skin": [{
+			"slot": [{
+				"display": [{
+					"path": "结算2CN01",
+					"type": "image",
+					"name": "结算2CN01",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN02",
+					"type": "image",
+					"name": "结算2CN02",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN03",
+					"type": "image",
+					"name": "结算2CN03",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN04",
+					"type": "image",
+					"name": "结算2CN04",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN05",
+					"type": "image",
+					"name": "结算2CN05",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN06",
+					"type": "image",
+					"name": "结算2CN06",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN07",
+					"type": "image",
+					"name": "结算2CN07",
+					"transform": {
+						
+					}
+				},
+				{
+					"path": "结算2CN08",
+					"type": "image",
+					"name": "结算2CN08",
+					"transform": {
+						
+					}
+				}],
+				"name": "sheetSlot"
+			}],
+			"name": ""
+		}],
+		"defaultActions": [{
+			"gotoAndPlay": "Sprite"
+		}],
+		"ik": [],
+		"aabb": {
+			"width": 199,
+			"y": -47.5,
+			"height": 95,
+			"x": -99.5
+		},
+		"slot": [{
+			"displayIndex": 7,
+			"name": "sheetSlot",
+			"parent": "root",
+			"color": {
+				
+			}
+		}],
+		"name": "armatureName"
+	}],
+	"name": "CDD_jiesuan",
+	"version": "5.5"
+}

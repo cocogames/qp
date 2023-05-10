@@ -1,0 +1,14 @@
+{"file":"TXFFC_lucky_item_number.png","frames":{
+"金":{"x":1,"y":1,"w":35,"h":18,"offX":0,"offY":0,"sourceW":35,"sourceH":18},
+"0":{"x":55,"y":1,"w":14,"h":19,"offX":0,"offY":0,"sourceW":14,"sourceH":19},
+"1":{"x":71,"y":1,"w":14,"h":19,"offX":0,"offY":0,"sourceW":14,"sourceH":19},
+"2":{"x":103,"y":1,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+"3":{"x":103,"y":21,"w":13,"h":19,"offX":0,"offY":0,"sourceW":13,"sourceH":19},
+"4":{"x":38,"y":1,"w":15,"h":18,"offX":0,"offY":0,"sourceW":15,"sourceH":18},
+"5":{"x":87,"y":21,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+"6":{"x":33,"y":21,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+"7":{"x":87,"y":1,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+"8":{"x":1,"y":21,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+"9":{"x":17,"y":21,"w":14,"h":18,"offX":0,"offY":0,"sourceW":14,"sourceH":18},
+".":{"x":119,"y":1,"w":8,"h":7,"offX":0,"offY":0,"sourceW":8,"sourceH":7},
+"/":{"x":49,"y":22,"w":11,"h":19,"offX":0,"offY":0,"sourceW":11,"sourceH":19}}}

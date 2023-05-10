@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"title": "注册送现金",
+		"subtitle": "",
+		"img": "HALL_black_mask_act_1_png",
+		"url": "",
+		"conteng": "",
+		"isOpen": 1
+	},
+	{
+		"id": 2,
+		"title": "充值送积分",
+		"subtitle": "",
+		"img": "HALL_black_mask_act_2_png",
+		"url": "",
+		"conteng": "",
+		"isOpen": 1
+	},
+	{
+		"id": 3,
+		"title": "活动三",
+		"subtitle": "",
+		"img": "HALL_black_mask_act_3_png",
+		"url": "",
+		"conteng": "",
+		"isOpen": 0
+	},
+	{
+		"id": 4,
+		"title": "活动四",
+		"subtitle": "",
+		"img": "HALL_black_mask_act_4_png",
+		"url": "",
+		"conteng": "",
+		"isOpen": 0
+	},
+	{
+		"id": 5,
+		"title": "活动五",
+		"subtitle": "",
+		"img": "HALL_black_mask_act_5_png",
+		"url": "",
+		"conteng": "",
+		"isOpen": 0
+	}
+]

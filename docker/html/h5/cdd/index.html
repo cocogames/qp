@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="landscape"
+         data-scale-mode="fixedWidth"
+         data-frame-rate="60"
+         data-content-width="1334"
+         data-content-height="750"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+<script>
+	//url:   /index.html?useSelfLib=1
+	var loc = window.location.href;
+	if(loc.indexOf('http') != -1){
+        var idx = loc.indexOf('://');
+        var lastIdx = loc.indexOf('/', idx+3);
+        if(lastIdx == -1){
+            lastIdx = loc.length;
+        }
+        var dm = loc.substring(idx+3, lastIdx);
+        if(dm.indexOf(':')!=-1){
+            dm = dm.substr(0, dm.indexOf(':'));
+        }
+        document.domain = dm;
+    }
+
+    var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };
+
+	var getOption = function(key) {
+		if (window.location) {
+			var search = location.search;
+			if (search == "") {
+				return "";
+			}
+			search = search.slice(1);
+			var searchArr = search.split("&");
+			var length_1 = searchArr.length;
+			for (var i = 0; i < length_1; i++) {
+				var str = searchArr[i];
+				var arr = str.split("=");
+				if (arr[0] == key) {
+					return arr[1];
+				}
+			}
+		}
+		return "";
+	}
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+		var errorFun = function(){
+            if (window && window.parent != window && window.parent['Global']) {
+				window.parent['Global'].onEvent('RES_LOAD_FAILED');
+			}
+        }
+        s.addEventListener('error', errorFun);
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+    xhr.addEventListener("load", function () {
+        var manifest ;
+		try{
+			manifest = JSON.parse(xhr.response);
+		}catch(e){
+		
+		}
+		if(manifest == null){
+			if (window && window.parent != window && window.parent['Global']) {
+				window.parent['Global'].onEvent('RES_LOAD_FAILED');
+			}
+			return;
+		}
+
+		var mergedJs = decodeURIComponent(getOption('mergedJs'));
+		if(mergedJs != null && mergedJs != ''){
+			//use hall's merged.js
+			manifest.initial = [mergedJs];
+		}
+
+        var list = manifest.initial.concat(manifest.game);
+        loadScript(list, function () {
+            /**
+             * {
+             * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
+             * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
+             * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
+             * "calculateCanvasScaleFactor": //a function return canvas scale factor
+             * }
+             **/
+            egret.runEgret({ renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor:function(context) {
+                var backingStore = context.backingStorePixelRatio ||
+                    context.webkitBackingStorePixelRatio ||
+                    context.mozBackingStorePixelRatio ||
+                    context.msBackingStorePixelRatio ||
+                    context.oBackingStorePixelRatio ||
+                    context.backingStorePixelRatio || 1;
+                return (window.devicePixelRatio || 1) / backingStore;
+            }});
+        });
+    });
+    xhr.send(null);
+</script>
+</body>
+
+</html>

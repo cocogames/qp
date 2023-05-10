@@ -1,0 +1,89 @@
+{
+	"frameRate": 24,
+	"name": "CDD_jiesuan",
+	"version": "5.5",
+	"compatibleVersion": "5.5",
+	"armature": [{
+		"type": "Armature",
+		"frameRate": 24,
+		"name": "armatureName",
+		"aabb": {
+			"x": -99.5,
+			"y": -47.5,
+			"width": 199,
+			"height": 95
+		},
+		"bone": [{
+			"name": "root"
+		}],
+		"slot": [{
+			"displayIndex": 5,
+			"name": "sheetSlot",
+			"parent": "root"
+		}],
+		"skin": [{
+			"slot": [{
+				"name": "sheetSlot",
+				"display": [{
+					"name": "结算201"
+				},
+				{
+					"name": "结算202"
+				},
+				{
+					"name": "结算203"
+				},
+				{
+					"name": "结算204"
+				},
+				{
+					"name": "结算205"
+				},
+				{
+					"name": "结算206"
+				},
+				{
+					"name": "结算207"
+				},
+				{
+					"name": "结算208"
+				}]
+			}]
+		}],
+		"animation": [{
+			"duration": 8,
+			"playTimes": 0,
+			"name": "Sprite",
+			"slot": [{
+				"name": "sheetSlot",
+				"displayFrame": [{
+					
+				},
+				{
+					"value": 1
+				},
+				{
+					"value": 2
+				},
+				{
+					"value": 3
+				},
+				{
+					"value": 4
+				},
+				{
+					"value": 5
+				},
+				{
+					"value": 6
+				},
+				{
+					"value": 7
+				}]
+			}]
+		}],
+		"defaultActions": [{
+			"gotoAndPlay": "Sprite"
+		}]
+	}]
+}

@@ -1,0 +1,12 @@
+{"file":"sgj_game_number10.png","frames":{
+"x":{"x":3,"y":87,"w":16,"h":18,"offX":0,"offY":2,"sourceW":16,"sourceH":20},
+"0":{"x":24,"y":3,"w":15,"h":22,"offX":0,"offY":0,"sourceW":15,"sourceH":22},
+"1":{"x":25,"y":87,"w":12,"h":22,"offX":0,"offY":0,"sourceW":12,"sourceH":22},
+"2":{"x":23,"y":59,"w":13,"h":22,"offX":0,"offY":0,"sourceW":13,"sourceH":22},
+"3":{"x":3,"y":59,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22},
+"4":{"x":3,"y":3,"w":15,"h":22,"offX":0,"offY":0,"sourceW":15,"sourceH":22},
+"5":{"x":3,"y":31,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22},
+"6":{"x":43,"y":31,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22},
+"7":{"x":42,"y":59,"w":13,"h":22,"offX":0,"offY":0,"sourceW":13,"sourceH":22},
+"8":{"x":45,"y":3,"w":15,"h":22,"offX":0,"offY":0,"sourceW":15,"sourceH":22},
+"9":{"x":23,"y":31,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22}}}

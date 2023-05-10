@@ -1,0 +1,12 @@
+{"file":"roomDeskFont.png","frames":{
+"6":{"x":65,"y":27,"w":16,"h":21,"offX":1,"offY":0,"sourceW":17,"sourceH":21},
+"7":{"x":44,"y":27,"w":17,"h":21,"offX":0,"offY":0,"sourceW":17,"sourceH":21},
+"8":{"x":52,"y":2,"w":17,"h":21,"offX":0,"offY":0,"sourceW":17,"sourceH":21},
+"9":{"x":2,"y":30,"w":17,"h":21,"offX":0,"offY":0,"sourceW":17,"sourceH":21},
+"楼":{"x":2,"y":2,"w":25,"h":24,"offX":0,"offY":0,"sourceW":25,"sourceH":24},
+"0":{"x":31,"y":2,"w":17,"h":21,"offX":0,"offY":0,"sourceW":17,"sourceH":21},
+"1":{"x":104,"y":27,"w":13,"h":21,"offX":1,"offY":0,"sourceW":17,"sourceH":21},
+"2":{"x":92,"y":2,"w":15,"h":21,"offX":1,"offY":0,"sourceW":17,"sourceH":21},
+"3":{"x":85,"y":27,"w":15,"h":21,"offX":1,"offY":0,"sourceW":17,"sourceH":21},
+"4":{"x":23,"y":30,"w":17,"h":21,"offX":0,"offY":0,"sourceW":17,"sourceH":21},
+"5":{"x":73,"y":2,"w":15,"h":21,"offX":1,"offY":0,"sourceW":17,"sourceH":21}}}
