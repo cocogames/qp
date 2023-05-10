@@ -5,6 +5,10 @@ tar -zxvf mysqldb.tar.gz -C docker/data
 sudo docker network create -d bridge game
 cd docker
 sudo docker-compose up -d
+sudo docker-compose down
+sudo docker-compose ps
+
+http://82.157.54.206:8010
 
 ifconfig eth0 | grep 'inet ' | tr -s ' ' | cut -d ' ' -f3
 

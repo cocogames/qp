@@ -121,3 +121,17 @@ docker inspect openinggame/web:v1
         }
     }
 ]
+
+sudo docker-compose ps
+  Name                 Command               State                  Ports
+-----------------------------------------------------------------------------------------
+etcd0       etcd --name=etcd0 --data-d ...   Up      2379/tcp, 2380/tcp
+kafka0      start-kafka.sh                   Up
+mongodb0    docker-entrypoint.sh --auth      Up      27017/tcp
+mysql0      docker-entrypoint.sh --def ...   Up      3306/tcp, 33060/tcp
+redis0      docker-entrypoint.sh redis ...   Up      6379/tcp
+redis1      docker-entrypoint.sh redis ...   Up      6379/tcp
+redis2      docker-entrypoint.sh redis ...   Up      6379/tcp
+server0     /run.sh                          Up      0.0.0.0:8011->81/tcp
+web0        /docker-entrypoint.sh ngin ...   Up      0.0.0.0:8010->80/tcp
+zookeeper   /bin/sh -c /usr/sbin/sshd  ...   Up      2181/tcp, 22/tcp, 2888/tcp, 3888/tcp
