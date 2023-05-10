@@ -23,6 +23,7 @@ ls /usr/share/nginx/html/
 50x.html  h5  index.html
 
 sudo docker cp web0:/usr/share/nginx/html/ .
+sudo chown -R test:test html/
 
 sudo docker exec -it server0 sh
 ps -ef
