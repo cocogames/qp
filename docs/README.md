@@ -37,7 +37,11 @@ PID   USER     TIME  COMMAND
   429 root      0:00 ps -ef
 
 http://82.157.54.206:8010
+16811111111
+123456
 http://82.157.54.206:8011
+
+https://autogpt.thesamur.ai/
 
 ifconfig eth0 | grep 'inet ' | tr -s ' ' | cut -d ' ' -f3
 
